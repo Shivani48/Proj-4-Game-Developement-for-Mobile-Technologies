@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">proj4</string>
+    <string name="play">click to play</string>
 </resources>
