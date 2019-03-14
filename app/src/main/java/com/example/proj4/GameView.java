@@ -1,9 +1,13 @@
 package com.example.proj4;
 
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
-public class GameView extends AppCompatActivity {
+public class GameView extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton buttonPlay;
 
@@ -19,6 +23,7 @@ public class GameView extends AppCompatActivity {
         buttonPlay = (ImageButton) findViewById(R.id.buttonPlay);
 
         //adding a click listener
+
         buttonPlay.setOnClickListener(this);
     }
 
@@ -27,6 +32,11 @@ public class GameView extends AppCompatActivity {
 
         //starting game activity
         startActivity(new Intent(this, GameActivity.class));
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
 
